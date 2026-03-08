@@ -1,22 +1,28 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { SiteFrame } from "@/components/SiteFrame";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LaJolee Aesthetics & Wellness",
+  title: "LaJolee Aesthetics & Wellness | Palm Coast Medical Spa",
   description:
-    "Aesthetic and wellness services in Palm Coast, Florida including wrinkle relaxers, facials, hydrodermabrasion, medical weight loss, hormone wellness, financing, and skincare support.",
+    "LaJolee Aesthetics & Wellness in Palm Coast, FL offers injectables, skin rejuvenation, hydrodermabrasion, medical weight loss, hormone wellness, and professional skincare.",
+  metadataBase: new URL("https://lajolee-aesthetics.com"),
+  openGraph: {
+    title: "LaJolee Aesthetics & Wellness",
+    description:
+      "Luxury medical aesthetics and wellness in Palm Coast, FL. Injectables, facials, hydrodermabrasion, weight loss, hormone wellness, and skincare.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>
-        <SiteFrame>{children}</SiteFrame>
+      <body className="bg-[var(--background)] text-[var(--foreground)]">
+        {children}
       </body>
     </html>
   );
