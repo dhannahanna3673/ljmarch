@@ -1,0 +1,25 @@
+# LaJolee Aesthetics & Wellness Website
+
+Next.js App Router project built to mirror the premium structure and mobile-friendly flow of the reference med spa site you provided, while using original LaJolee-specific content.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy on Vercel
+
+1. Create a new project in Vercel.
+2. Upload this folder or import it through Git if you decide to use Git later.
+3. Framework preset: Next.js
+4. Build command: `next build`
+5. Output setting: default
+
+## Notes
+
+- No stock images are inserted.
+- The results gallery is intentionally styled but empty.
+- No meet-the-team section is included.
+- Layout is fully responsive for mobile.

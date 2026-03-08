@@ -1,35 +1,7 @@
-import Link from "next/link";
-import { MapPin, Phone, Mail, CalendarDays } from "lucide-react";
-import { business } from "@/lib/site-data";
+import type { NextConfig } from "next";
 
-export function TopBar() {
-  return (
-    <div className="border-b border-[#ebe2db] bg-white/90">
-      <div className="section-shell flex flex-col gap-3 py-3 text-xs text-[#675f69] sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap items-center gap-4">
-          <span className="inline-flex items-center gap-2">
-            <MapPin className="h-3.5 w-3.5" />
-            {business.addressLine1}, {business.cityStateZip}
-          </span>
-          <Link href={business.phoneHref} className="inline-flex items-center gap-2 hover:text-ink">
-            <Phone className="h-3.5 w-3.5" />
-            {business.phoneDisplay}
-          </Link>
-          <Link href={`mailto:${business.email}`} className="inline-flex items-center gap-2 hover:text-ink">
-            <Mail className="h-3.5 w-3.5" />
-            {business.email}
-          </Link>
-        </div>
-        <Link
-          href={business.bookNow}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 font-semibold uppercase tracking-[0.2em] text-ink hover:text-taupe"
-        >
-          <CalendarDays className="h-3.5 w-3.5" />
-          Book Now
-        </Link>
-      </div>
-    </div>
-  );
-}
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+};
+
+export default nextConfig;
