@@ -1,18 +1,18 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import { ReactNode } from "react";
 import { SiteFrame } from "@/components/SiteFrame";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "LaJolee Aesthetics & Wellness",
   description:
-    "Aesthetic and wellness services in Palm Coast Florida including injectables, facials, medical weight loss, and hormone wellness.",
+    "Aesthetic and wellness services in Palm Coast, Florida including wrinkle relaxers, facials, hydrodermabrasion, medical weight loss, hormone wellness, financing, and skincare support.",
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body>
